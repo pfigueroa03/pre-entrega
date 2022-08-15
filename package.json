@@ -1,0 +1,15 @@
+{
+  "author": "Pablo Figueroa. pablofigue03@gmail.com",
+  "description": "Uso de node-sass y nodemon para compilar SCSS files.",
+  "license": "MIT",
+  "name": "coder-web",
+  "scripts": {
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "build:css": "node-sass --output-style compressed assets/sass/main.scss assets/css/main.css"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.19"
+  }
+}

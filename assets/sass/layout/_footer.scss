@@ -1,0 +1,21 @@
+footer{
+    margin-top: 2px;
+    background-color: $main-bg-color;
+    width: 100%;
+    a {
+        color: $color-white;
+        text-align: center;
+        padding: 14px 16px;
+    }
+
+    p {
+        display: contents;
+        color: $color-white;
+    }
+
+    .copy {
+        text-align: end;
+        margin-right: 1%;
+        color: $color-white;
+    }
+}

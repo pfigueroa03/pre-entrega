@@ -1,0 +1,20 @@
+.contact_main {
+    background-image: url("/assets/img/contenido/contact_bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    p {
+        font-size: large;
+    }
+    .contact_form {
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        align-items: flex-start;
+        legend {
+            font-weight: bold;
+        }
+    }
+}
+    
+

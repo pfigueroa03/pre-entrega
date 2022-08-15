@@ -1,0 +1,107 @@
+.mainNav-nb {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: $italic;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: $main-bg-color;
+    height: 40px;
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li{
+            float: map-get($positions, left);
+
+            a {
+                &:hover {
+                    background-color: $bg-color-hover;
+                }
+            }
+            
+        }
+    }
+
+    a{
+        float: map-get($positions, left);
+        display: block;
+        color: $color-white;
+        text-align: center;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+}
+
+.dropdown-nb {
+    float: map-get($positions, left);
+    overflow: hidden;
+
+    .drop-father-nb {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: $italic;
+        font-size: large;
+        border: none;
+        outline: none;
+        color: $color-white;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content-nb {
+        display: none;
+        position: map-get($positions, absolute);
+        background-color: $main-bg-color;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+
+        a {
+            float: none;
+            color: $color-white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: map-get($positions, left);
+            &:hover {
+                background-color: $bg-color-hover;
+            }
+        }
+    }
+
+    &:hover {
+        .dropdown-content-nb {
+            display: block;
+        }
+    }
+}
+
+.main_img {
+    img {
+        width: auto;
+        height: 40px;
+        position: map-get($positions, absolute);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main_img {
+        display: none;
+    }
+
+    .mainNav-nb {
+        font-size: small;
+    }
+
+    .dropdown-nb {
+        float: map-get($positions, left);
+        overflow: hidden;
+    
+        .drop-father-nb {
+            font-size: small;
+        }
+    }
+}

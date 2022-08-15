@@ -1,0 +1,27 @@
+/* Text and background (bg) color */
+$color-white: white;
+$color-white-smk: whitesmoke;
+$main-bg-color: #333;
+$bg-color-hover: #111;
+$bg-green: green;
+$bg-blue: blue;
+$bg-black: black;
+
+/* Font styles-size-position */
+@mixin fonts-text ($font-style, $font-size, $text-align) {
+    font-style:$font-style;
+    font-size:$font-size;
+    text-align:$text-align;
+}
+
+$italic: italic;
+
+/* Positions */
+$positions: (
+    left: left,
+    relative: relative,
+    absolute: absolute,
+);
+
+
+    

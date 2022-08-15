@@ -1,0 +1,270 @@
+@import "./project/fonts";
+@import "./project/variables";
+@import "./layout/grid";
+@import "./layout/header";
+@import "./views/contact";
+@import "./layout/footer";
+
+#bienvenida {
+    .welcome {
+        @include fonts-text(italic, 35px, center);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+.games_page {
+    img {
+        border-radius: 30px;
+        padding: 7px;
+        margin: 5 5 0 5;
+        height: 264px;
+        &:hover {
+            animation-duration: 2s;
+            animation-name: bigsmall;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    }
+}
+
+@keyframes bigsmall {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+#linear-grad{
+    background-image: linear-gradient($main-bg-color, rgb(151, 50, 50));
+}
+
+/* Microsoft page styles*/
+.microsoft_title{
+    @include fonts-text(italic, 45px, center);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.micro_intro {
+    display: flex;
+    background-color: $bg-green;
+    .text_intro{
+        .xbox_intro{
+            h5 {
+                font-family: 'Yellowtail', cursive;
+                font-size: 20px;
+                margin: 3px;
+                color: $color-white;
+            }
+            p {
+                margin: 10px;
+                color: $color-white-smk;
+            }
+        }
+    }
+    .video_intro {
+        &.main_video {
+            width: 100%;
+        }
+    }
+}
+
+#novedades_xbox {
+    h2 {
+        @include fonts-text(italic, 32px ,center)
+    }
+}
+
+.microsoft_windows {
+    background-image: url("/assets/img/contenido/windows11_bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.90;
+    h5, p {
+        color: $color-white;
+    }
+    p {
+        font-size: large;
+    }
+    h5 {
+        font-weight: bolder;
+    }
+}
+    
+/* Index.html */
+
+.novedad_intro {
+    background-color: $bg-black;
+    background-image: url("/assets/img/updated.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: map-get($positions, relative);
+    p {
+        color: $color-white;
+        position: map-get($positions, absolute);
+        bottom: 0;
+        right: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: larger;
+    }
+}
+
+.play_xbox {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+
+    .console_intro {
+        position: map-get($positions, relative);
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+        .img_console_intro{
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+            position: map-get($positions, relative);
+        }
+
+        .console--topleft {
+            position: map-get($positions, absolute);
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+        }
+
+        .img_games_intro {
+            width: 100%;
+            height: auto;
+            position: map-get($positions, relative);
+        }
+
+        .games--botright{
+            position: map-get($positions, absolute);
+            bottom: 8px;
+            right: 16px;
+            font-size: 16px;
+            color: $color-white;
+        }
+    }
+}
+
+/* Sony.html */
+.play_img_title {
+    width: auto;
+    height: 100px;
+    background-image: url('/assets/img/contenido/Sony.jpg');
+    background-size: 50% 150%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.playstation__title{
+    font-family: 'Goldman', cursive;
+}
+
+.playstation__intro{
+    font-family: 'Goldman', cursive;
+    color: $color-white-smk;
+    float: right;
+    position: map-get($positions, relative);
+    margin: -3rem 0 2rem 1rem;
+    padding: 1rem;
+    display: contents;
+}
+
+.mobile_nav{
+    display:none
+}
+
+.main_video{
+    width: inherit;
+}
+
+/* games.html */
+#linear-grad{
+    background-image: linear-gradient(#333, rgb(151, 50, 50));
+}
+
+.game_title{
+    @include fonts-text(italic, xx-large, center);
+    font-family: 'Cherry Swash', cursive;
+    margin: 5px 0 15px 0;
+}
+
+.games_image {
+    border-radius: 30px;
+    padding: 7px;
+    margin: 5 5 0 5;
+    height: 264px;
+
+    &:hover{
+        animation-duration: 2s;
+        animation-name: bigsmall;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+.play_xbox_game{
+    @extend.games_image;
+    box-shadow: 10px 5px 10px rgb(3, 109, 77);
+}
+
+.xbox_game{
+    @extend.games_image;
+    box-shadow: 10px 5px 10px $bg-green;
+}
+
+.play_game{
+    @extend.games_image;
+    box-shadow: 10px 5px 10px $bg-blue;
+}
+
+@keyframes bigsmall {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card{
+        font-size:15px;
+    }
+    .card h5{
+        font-size:15px;
+    }
+    .desktop_nav{
+        display:none;
+    }
+    .mobile_nav{
+        display:flex;
+    }
+    .compare_ps4{
+        display: none;
+    }
+
+    .play_5_video {
+        height: 20rem;
+    }
+
+    .microsoft_windows {
+        background-image: none;
+        background-color: blue;
+        h5, p {
+            color: $color-white;
+        }
+    
+        p {
+            font-size: large;
+        }
+    }
+
+}
